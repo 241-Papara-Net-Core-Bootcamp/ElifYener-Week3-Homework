@@ -1858,9 +1858,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
-          "PaparaThirdWeek.Domain": "1.0.0"
+          "PaparaThirdWeek.Domain": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3"
         },
         "compile": {
           "bin/placeholder/PaparaThirdWeek.Data.dll": {}
@@ -1873,7 +1873,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "5.0.0"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3"
         },
         "compile": {
           "bin/placeholder/PaparaThirdWeek.Domain.dll": {}
@@ -1886,9 +1887,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "PaparaThirdWeek.Data": "1.0.0",
-          "PaparaThirdWeek.Domain": "1.0.0"
+          "PaparaThirdWeek.Domain": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3"
         },
         "compile": {
           "bin/placeholder/PaparaThirdWeek.Services.dll": {}
@@ -6284,34 +6286,33 @@
     },
     "PaparaThirdWeek.Services/1.0.0": {
       "type": "project",
-      "path": "../PaparaThirdWeekServices/PaparaThirdWeek.Services.csproj",
-      "msbuildProject": "../PaparaThirdWeekServices/PaparaThirdWeek.Services.csproj"
+      "path": "../PaparaThirdWeek.Services/PaparaThirdWeek.Services.csproj",
+      "msbuildProject": "../PaparaThirdWeek.Services/PaparaThirdWeek.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
-      "PaparaThirdWeek.Data >= 1.0.0",
       "PaparaThirdWeek.Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samet.kayikci\\.nuget\\packages\\": {}
+    "C:\\Users\\elif-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samet.kayikci\\source\\repos\\PaparaThirdWeek\\PaparaThirdWeek.Api\\PaparaThirdWeek.Api.csproj",
+      "projectUniqueName": "D:\\Users\\elif-\\Documents\\GitHub\\ElifYener-Week3-Homework\\PaparaThirdWeek.Api\\PaparaThirdWeek.Api.csproj",
       "projectName": "PaparaThirdWeek.Api",
-      "projectPath": "C:\\Users\\samet.kayikci\\source\\repos\\PaparaThirdWeek\\PaparaThirdWeek.Api\\PaparaThirdWeek.Api.csproj",
-      "packagesPath": "C:\\Users\\samet.kayikci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samet.kayikci\\source\\repos\\PaparaThirdWeek\\PaparaThirdWeek.Api\\obj\\",
+      "projectPath": "D:\\Users\\elif-\\Documents\\GitHub\\ElifYener-Week3-Homework\\PaparaThirdWeek.Api\\PaparaThirdWeek.Api.csproj",
+      "packagesPath": "C:\\Users\\elif-\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\elif-\\Documents\\GitHub\\ElifYener-Week3-Homework\\PaparaThirdWeek.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\samet.kayikci\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elif-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6325,11 +6326,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\samet.kayikci\\source\\repos\\PaparaThirdWeek\\PaparaThirdWeek.Data\\PaparaThirdWeek.Data.csproj": {
-              "projectPath": "C:\\Users\\samet.kayikci\\source\\repos\\PaparaThirdWeek\\PaparaThirdWeek.Data\\PaparaThirdWeek.Data.csproj"
-            },
-            "C:\\Users\\samet.kayikci\\source\\repos\\PaparaThirdWeek\\PaparaThirdWeekServices\\PaparaThirdWeek.Services.csproj": {
-              "projectPath": "C:\\Users\\samet.kayikci\\source\\repos\\PaparaThirdWeek\\PaparaThirdWeekServices\\PaparaThirdWeek.Services.csproj"
+            "D:\\Users\\elif-\\Documents\\GitHub\\ElifYener-Week3-Homework\\PaparaThirdWeek.Services\\PaparaThirdWeek.Services.csproj": {
+              "projectPath": "D:\\Users\\elif-\\Documents\\GitHub\\ElifYener-Week3-Homework\\PaparaThirdWeek.Services\\PaparaThirdWeek.Services.csproj"
             }
           }
         }
@@ -6344,13 +6342,13 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[5.0.0, )"
-          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.0, )"
           },
@@ -6384,7 +6382,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

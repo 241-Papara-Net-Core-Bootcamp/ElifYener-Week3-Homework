@@ -62,5 +62,11 @@ namespace PaparaThirdWeek.Data.Concretes
             Context.Entry(entity).State = EntityState.Modified;
             Context.SaveChanges();
         }
+
+        public T GetById(Expression<Func<T, bool>> filter)
+        {
+            return Context.Set<T>().SingleOrDefault(filter);
+        }
+
     }
 }

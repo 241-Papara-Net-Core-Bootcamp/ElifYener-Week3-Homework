@@ -1,17 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using PaparaThirdWeek.Data.Abstracts;
 using PaparaThirdWeek.Data.Concretes;
 using PaparaThirdWeek.Data.Context;
-using PaparaThirdWeek.Domain.Entities;
 using PaparaThirdWeek.Services.Abstracts;
 using PaparaThirdWeek.Services.Concretes;
 using System;
@@ -19,7 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PaparaThirdWeek.Api
+namespace PaparaThirdWeek
 {
     public class Startup
     {
@@ -33,7 +30,6 @@ namespace PaparaThirdWeek.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

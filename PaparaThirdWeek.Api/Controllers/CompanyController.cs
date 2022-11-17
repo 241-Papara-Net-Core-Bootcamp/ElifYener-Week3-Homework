@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PaparaThirdWeek.Domain.Entities;
 using PaparaThirdWeek.Services.Abstracts;
+using PaparaThirdWeek.Services.Concretes;
 using PaparaThirdWeek.Services.DTOs;
 
 namespace PaparaThirdWeek.Api.Controllers
@@ -15,6 +16,19 @@ namespace PaparaThirdWeek.Api.Controllers
         public CompanyController(ICompanyService companyService)
         {
             this.companyService = companyService;
+        }
+        [HttpGet("Companies")]
+        public IActionResult GetAll()
+        {
+            var result = companyService.GetAll();
+            return Ok(result);
+        }
+
+        [HttpGet("id")]
+        public IActionResult GetById(int id)
+        {
+            var result = companyService.GetById(id);
+            return Ok(result);
         }
 
         [HttpPost]
@@ -35,11 +49,18 @@ namespace PaparaThirdWeek.Api.Controllers
             return Ok();
         }
 
-        [HttpGet("Companies")]
-        public IActionResult Get()
+        [HttpPut]
+        public IActionResult Update(Company company)
         {
-            var result = companyService.GetAll();
-            return Ok(result);   
+            companyService.Update(company);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(Company company)
+        {
+            companyService.HardRemove(company);
+            return Ok();
         }
     }
 }
